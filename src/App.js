@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import PaymentStatus from './composants/PaymentStatus/PaymentStatus';
+import CarteBleue from './composants/CarteBleue/CarteBleue';
+import PaymentButton from './composants/PaymentButton/PaymentButton';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="payment-status">
+        <PaymentStatus />
+      </div>
+      <div class="carte-bleue-div">
+        <CarteBleue widthSize="1200px" />
+      </div>
+      <div class="payment-button">
+        <PaymentButton />
+      </div>
     </div>
+
   );
 }
 
